@@ -6,7 +6,51 @@
              xmlns:local="clr-namespace:WpfRecord"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,30,0"/>
+            <Setter Property="Background" Value="#FF2791F0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#FF2791F0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="3"
+                                BorderBrush="#FF429AF4"/>
+                            <TextBlock x:Name="text"
+                                   Text="{TemplateBinding Content}"
+                                   FontSize="{TemplateBinding FontSize}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Foreground="{TemplateBinding Foreground}" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FF2B83D3"/>
+                                <Setter Property="Foreground" TargetName="text" Value="White"/>
+                                <Setter Property="Background" Value="#FF2B83D3"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" TargetName="border" Value="#FFAEAEAE"/>
+                                <Setter Property="Foreground" TargetName="text" Value="White"/>
+                                <Setter Property="Background" Value="#FFAEAEAE"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid>
-        <Button x:Name="btn" Content="我是按钮"/>
+        <Button x:Name="btn" Content="我是按钮" Style="{DynamicResource ButtonStyle}" Width="100" Height="40"/>
     </Grid>
 </UserControl>
