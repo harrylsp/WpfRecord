@@ -60,7 +60,7 @@
     <Grid Background="White">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <TextBlock VerticalAlignment="Center" Text="用户名" HorizontalAlignment="Center" />
-            <TextBox Name="xm" Height="40" VerticalContentAlignment="Center" Style="{DynamicResource CornerRadiusTextBoxStyle}" Margin="8,0,0,0">
+            <TextBox Name="xm" Height="40" VerticalContentAlignment="Center" Style="{StaticResource CornerRadiusTextBoxStyle}" Margin="8,0,0,0" PreviewMouseLeftButtonDown="Xm_PreviewMouseLeftButtonDown">
                 <TextBox.Resources>
                     <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity=".3" Stretch="None"  AlignmentX="Left">
                         <VisualBrush.Visual>

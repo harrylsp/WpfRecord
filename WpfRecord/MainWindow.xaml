@@ -9,7 +9,9 @@
     <Grid>
         <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled">
             <!--TextBox-->
-            <local:TextBox x:Name="textbox"/>
+            <!--<local:TextBox x:Name="textbox"/>-->
+            <!--Button-->
+            <local:ButtonControl x:Name="button"/>
         </ScrollViewer>
     </Grid>
 </Window>

@@ -23,5 +23,18 @@ namespace WpfRecord
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// 双击全选TextBox里的文本
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Xm_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                this.xm.SelectAll();
+            }
+        }
     }
 }
