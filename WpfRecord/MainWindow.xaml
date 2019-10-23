@@ -9,9 +9,11 @@
     <Grid>
         <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled">
             <!--TextBox-->
-            <!--<local:TextBox x:Name="textbox"/>-->
+            <!--<local:TextBoxControl x:Name="textbox"/>-->
             <!--Button-->
-            <local:ButtonControl x:Name="button"/>
+            <!--<local:ButtonControl x:Name="button"/>-->
+            <!--DatePicker-->
+            <local:DatePickerControl x:Name="datepick"/>
         </ScrollViewer>
     </Grid>
 </Window>

@@ -17,9 +17,9 @@ namespace WpfRecord
     /// <summary>
     /// TextBox.xaml 的交互逻辑
     /// </summary>
-    public partial class TextBox : UserControl
+    public partial class TextBoxControl : UserControl
     {
-        public TextBox()
+        public TextBoxControl()
         {
             InitializeComponent();
         }

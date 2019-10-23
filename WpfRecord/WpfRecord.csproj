@@ -56,10 +56,20 @@
     <Compile Include="ButtonControl.xaml.cs">
       <DependentUpon>ButtonControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TextBox.xaml.cs">
-      <DependentUpon>TextBox.xaml</DependentUpon>
+    <Compile Include="ControlInherit\DatePickerCalendar.cs" />
+    <Compile Include="ControlInherit\DatePickerDateFormat.cs" />
+    <Compile Include="ControlInherit\DatePickerWatermark.cs" />
+    <Compile Include="DatePickerControl.xaml.cs">
+      <DependentUpon>DatePickerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TextBoxControl.xaml.cs">
+      <DependentUpon>TextBoxControl.xaml</DependentUpon>
     </Compile>
     <Page Include="ButtonControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DatePickerControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -75,7 +85,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="TextBox.xaml">
+    <Page Include="TextBoxControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
