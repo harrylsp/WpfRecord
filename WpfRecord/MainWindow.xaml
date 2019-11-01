@@ -13,7 +13,9 @@
             <!--Button-->
             <!--<local:ButtonControl x:Name="button"/>-->
             <!--DatePicker-->
-            <local:DatePickerControl x:Name="datepick"/>
+            <!--<local:DatePickerControl x:Name="datepick"/>-->
+            <!--WebCanlendar-->
+            <local:WebCalendarControl x:Name="webcanlendar"/>
         </ScrollViewer>
     </Grid>
 </Window>

@@ -65,6 +65,9 @@
     <Compile Include="TextBoxControl.xaml.cs">
       <DependentUpon>TextBoxControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WebCalendarControl.xaml.cs">
+      <DependentUpon>WebCalendarControl.xaml</DependentUpon>
+    </Compile>
     <Page Include="ButtonControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -86,6 +89,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="TextBoxControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WebCalendarControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -112,6 +119,16 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\arrow_left_month.png" />
+    <Resource Include="Images\arrow_right_year.png" />
+    <Resource Include="Images\arrow_right_month.png" />
+    <Resource Include="Images\arrow_left_year.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\location_gray.png" />
+    <Resource Include="Images\location_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
