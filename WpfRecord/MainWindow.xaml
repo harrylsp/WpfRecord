@@ -15,7 +15,9 @@
             <!--DatePicker-->
             <!--<local:DatePickerControl x:Name="datepick"/>-->
             <!--WebCanlendar-->
-            <local:WebCalendarControl x:Name="webcanlendar"/>
+            <!--<local:WebCalendarControl x:Name="webcanlendar"/>-->
+            <!--ListBox-->
+            <local:ListBoxControl x:Name="listBox"/>
         </ScrollViewer>
     </Grid>
 </Window>
