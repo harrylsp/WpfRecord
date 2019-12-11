@@ -23,5 +23,46 @@ namespace WpfRecord
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// 方法
+        /// </summary>
+        /// <param name="sender">参数1</param>
+        /// <param name="e">参数2</param>
+        private void Popup_Opened(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// 方法
+        /// </summary>
+        /// <param name="sender">参数1</param>
+        /// <param name="e">参数2</param>
+        private void Popup_Closed(object sender, EventArgs e)
+        {
+        }
+
+        private void ToggleButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (this.Popup.IsOpen)
+            {
+                this.Popup.IsOpen = false;
+            }
+            else
+            {
+                this.Popup.IsOpen = true;
+            }
+        }
+
+        /// <summary>
+        /// 安装指南
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void InstallGuide_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.baidu.com");
+            e.Handled = true;
+        }
     }
 }

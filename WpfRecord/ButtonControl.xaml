@@ -50,7 +50,67 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-    <Grid>
+    <Grid HorizontalAlignment="Center">
         <Button x:Name="btn" Content="我是按钮" Style="{DynamicResource ButtonStyle}" Width="100" Height="40"/>
+
+        <Button x:Name="ToggleButton"
+                Margin="200,0,0,0"
+                Click="ToggleButton_Click"
+                Cursor="Hand"
+                Background="Transparent"
+                BorderThickness="0"
+                Content="">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="3" Background="White" BorderBrush="Blue" BorderThickness="1" Width="100" Height="40">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Label x:Name="lblContent" Content="下拉按钮" FontSize="12" Foreground="Blue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Opacity=".7"/>
+                            <Image x:Name="img"
+                                   Width="10"
+                                   Height="5"
+                                   Margin="10,0,0,0"
+                                   Source="Images/dropdown_blue.png"
+                                   Stretch="None"/>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <!--<Setter TargetName="img" Property="Source" Value="Images/setup_hover_btn.png"/>-->
+                            <!--<Setter TargetName="img" Property="Opacity" Value="1"/>-->
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Popup x:Name="Popup"
+               IsOpen="False"
+               Placement="Center"
+               VerticalOffset="38"
+               HorizontalOffset="100"
+               Focusable="False"
+               AllowsTransparency="True"
+               PopupAnimation="Slide"
+               Closed="Popup_Closed"
+               Opened="Popup_Opened"
+               StaysOpen="False">
+            <Border BorderBrush="Red"
+                    CornerRadius="3"
+                    BorderThickness="1"
+                    Background="White">
+                <Grid Background="Transparent" Width="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0"
+                               x:Name="installGuide"
+                               Text="下拉选项"
+                               MouseLeftButtonDown="InstallGuide_MouseLeftButtonDown">
+                    </TextBlock>
+                </Grid>
+            </Border>
+        </Popup>
     </Grid>
 </UserControl>
