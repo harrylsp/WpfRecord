@@ -11,13 +11,17 @@
             <!--TextBox-->
             <!--<local:TextBoxControl x:Name="textbox"/>-->
             <!--Button-->
-            <local:ButtonControl x:Name="button"/>
+            <!--<local:ButtonControl x:Name="button"/>-->
             <!--DatePicker-->
             <!--<local:DatePickerControl x:Name="datepick"/>-->
             <!--WebCanlendar-->
             <!--<local:WebCalendarControl x:Name="webcanlendar"/>-->
             <!--ListBox-->
             <!--<local:Test x:Name="listBox"/>-->
+            <!--ProgressBar-->
+            <local:ProgressBarControl x:Name="progressBar" Value="-1"/>
         </ScrollViewer>
+        <!--配合ProgressBarControl使用-->
+        <!--<Button Click="Button_Click" Content="开始" Margin="0,100,0,0" Height="50" Width="100"/>-->
     </Grid>
 </Window>
